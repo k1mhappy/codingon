@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <form>
+        <!-- input 태그 -->
+        <input type="button" value="버튼">
+        <input type="text" placeholder="ID" disabled value="ID값">
+        <input type="password" placeholder="PW">
+        <input type="checkbox" name="fruits" value="사과" checked="">apple
+        <input type="checkbox" name="fruits" value="바나나">banana
+        <input type="radio" name="gender" value="남자" checked>남자
+        <input type="radio" name="gender" value="여자">여자
+
+        <input type="date" name="calender">
+        <input type="datetime-local" name="calender2">
+
+        <select>
+            <optgroup label="커피">
+                <option value="americano">아메리카노</option>
+                <option value="latte">카페라떼</option>
+                <option value="choco">초코라떼</option>
+            </optgroup>
+            <optgroup label="주스">
+                <option value="strawberry">딸기</option>
+                <option value="banana">바나나</option>
+                <option value="orange">오렌지</option>
+                <option value="안먹음" disabled>안먹음</option>
+            </optgroup>
+        </select>
+    </form>
+
+    <hr>
+    <!-- table -->
+    <table border="1" cellspacing="0" cellpadding="5" width="300" height="100">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <td colspan="2">luna</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>keem</td>
+            <td>23</td>
+            <td rowspan="2">01026645737</td>
+        </tr>
+        <tr>
+            <td>shell</td>
+            <td>72</td>
+        </tr>
+    </table>
+</body>
+
+</html>
