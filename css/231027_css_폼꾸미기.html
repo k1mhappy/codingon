@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: #eeeeb2;
+            border: 5px dotted brown;
+            border-radius: 35px;
+            padding: 30px;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+        h2{
+            color: rgb(79, 3, 3);
+        }
+        h4{
+            /* border: 2px solid black; */
+        }
+
+    </style>
+</head>
+
+<body style="margin: 30px;">
+    <form>
+        <h2>설문조사</h2>
+        <b style="padding-right: 21px;">이름</b><input type="text"><br>
+        <b style="padding-right: 5px;">이메일</b><input type="email" placeholder="love@example.com">
+
+        <h4>나이</h4>
+        <input type="radio" name="age" value="10대" checked>10대
+        <input type="radio" name="age" value="20대">20대
+        <input type="radio" name="age" value="30대">30대
+        <input type="radio" name="age" value="40대">40대                
+        <input type="radio" name="age" value="50대">50대
+        <input type="radio" name="age" value="60대">60대 이상
+
+        <h4>원하는 강의(복수응답가능합니다.)</h4>
+        <input type="checkbox" name="lecture" value="html" checked>html
+        <input type="checkbox" name="lecture" value="script">javascript
+        <input type="checkbox" name="lecture" value="css">css
+        <br><br>
+        <textarea style="background-color: rgb(195, 213, 246);" placeholder="하고 싶은 말을 써주세요:)" cols="50" rows="10"></textarea>
+        <input type="button" value="제출">
+    </form>
+</body>
+</html>
