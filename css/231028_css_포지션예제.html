@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 0;
+            text-align: center;
+            line-height: 100px;
+            position: relative;   /*item2가 문제일때 바디가 부모니까 포지션 relative를 주면됨 */
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .position-static{
+            background-color: red;
+            position: static;
+        }
+        .position-relative{
+            background-color: orange;
+            position: relative;
+            left: 50px;
+            top: 30px;
+        }
+        .position-absolute{
+            background-color: yellow;
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+        }
+        .position-fixed{
+            background-color: green;
+            position: fixed;
+            right: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+        <div class="position-static"></div>
+        <div class="position-relative">item1</div>
+        <div class="position-absolute">item2</div>
+        <div class="position-fixed">item3</div>
+</body>
+</html>

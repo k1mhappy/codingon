@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        .item1{
+            background-color: bisque;
+            position: relative; /*얘를 안써주면 포지션이 static이라 item3 위로 안올라올거임!! relative를 써줘야 올라감 */
+            z-index: 1;
+        }
+        .item2{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background-color: aqua;
+        }
+        .item3{
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            background-color: blueviolet;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+</body>
+</html>

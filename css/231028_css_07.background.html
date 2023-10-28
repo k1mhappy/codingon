@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+        div{
+            background-color: orange;
+            width: 800px;
+            height: 500px;
+
+        }
+        .background-img{
+            background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+
+            /* 1. background-repeat */
+            background-repeat: repeat; /*default값*/
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: no-repeat;
+
+            /* 2. background-position
+            background-position: left;
+            background-position: left top;
+            background-position: center;
+            background-position: 10px 100px;
+            background-position: 100px; */
+
+            /* background-size */
+            background-size: auto; /*default값*/
+            background-size: 100px;
+            background-size: 100px 50px;
+            background-size: cover;
+            background-size: contain;
+        }
+
+        /* background-attachment */
+        .background-attach{
+            width: 300px;
+            height: 300px;
+            overflow: scroll;
+            background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+            background-attachment: local; /*글이랑 이미지랑 같이 스크롤*/
+            background-attachment: scroll; /*글만 스크롤되고 뒤 배경은 고정*/
+            background-attachment: fixed; /*뷰포트에 고정.뭔가 전체적으로 올라가고 내려가는 느낌*/
+        }
+    </style>
+</head>
+<body>
+    <div class="background-img"></div>
+    <div class="background-attach">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officiis quaerat rerum voluptatum quos hic ad suscipit culpa? Exercitationem eaque iste magnam sit quasi quo voluptatem eos praesentium quidem commodi.
+        Reprehenderit aliquam repellendus ut illum dignissimos et, quasi, aliquid recusandae minus consequatur esse? Sunt obcaecati ad nemo nam ratione, provident dolores dolore repellat error at dignissimos. Cum, minus! Nemo, saepe.
+        Eius nesciunt deleniti eum saepe necessitatibus? Perspiciatis facere ipsum aspernatur, architecto dolor officia sit dignissimos impedit odit. Quia nobis eveniet odio maiores eos magni dignissimos porro tenetur reiciendis? Distinctio, atque.
+        Perferendis nulla maxime voluptas, consectetur sequi sunt. Aperiam totam animi numquam sed, a officiis eos qui voluptates obcaecati, iste blanditiis iure. Nihil, unde similique! Laudantium natus nemo quis quas mollitia.
+    </div>
+</body>
+</html>
