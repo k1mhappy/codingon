@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        div{
+            display: inline-block;
+            position: relative;
+            margin-right: -200px;
+            padding-top: 500px;
+
+        }
+        #img1{
+            width: 500px;
+            height: 300px;
+            transform: skewY(30deg);
+            position: relative;
+            z-index: 3;
+            margin-left: 50px;
+        }
+        #img2{
+            width: 500px;
+            height: 300px;
+            transform: skewY(30deg);
+            position: relative;
+            z-index: 2;
+        }
+        #img3{
+            width: 500px;
+            height: 300px;
+            transform: skewY(30deg);
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id=img1 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+        ></img>
+    </div>
+    <div>
+        <img id=img2 src="data:image/jpeg;base64,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"
+        ></img>
+    </div>
+    <div>
+        <img id=img3 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"
+        ></img>
+    </div>
+</body>
+</html>

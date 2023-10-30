@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            animation-name: anima;
+            animation-duration: 3s; 
+
+        }
+        @keyframes anima{
+            from{
+                margin-left: 100%; /*안보이다가 안으로 들어올거임*/
+                width: 300%; /*p태그가 브라우저 전체를 넓게 잡아 보이니까 임의로 300%로 잡아놓고 줄여주면 한줄로 보이는 것 */
+            }
+            to{
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <p>“As I relax on the sofa and gaze around a room a thought hits me: this is exactly the place I’ve been looking for all my life. A little hideaway in some sinkhole somewhere. I’d always thought of it as a secret, imaginary place, and can barely believe that it actually exists. I close my eyes and take a breath, and wonder of it all settles over me like a gentle cloud.”</p>
+</body>
+</html>
