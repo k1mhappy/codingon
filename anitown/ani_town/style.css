@@ -4,8 +4,25 @@
 */
 body {
   width: 100%;
+  animation: skyani 8s infinite;
 }
-
+@keyframes skyani{
+  0%{
+    background-color: #636888;
+  }
+  25%{
+    background-color: #b1e1e2;
+  }
+  50%{
+    background-color: #fcd2e2;
+  }
+  75%{
+    background-color: #675577;
+  }
+  100%{
+    background-color: #636888;
+  }
+}
 section {
   width: 700px;
   height: 450px;
@@ -18,10 +35,56 @@ section .sky {
 
 section .sky .sun {
   width: 180px;
+  animation: sunani 5s infinite ;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+@keyframes sunani{
+  0%{
+    transform: rotate(0);
+    opacity: 0.8;
+  }
+  50%{
+    transform: rotate(90deg);
+    opacity: 0.5;
+  }
+  75%{
+    transform: rotate(90deg);
+    opacity: 0.2;
+  }
+  100%{
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
 }
 
 section .sky .moon {
   width: 160px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  animation: moon linear 5s infinite ;
+}
+@keyframes moon{
+  0%{
+    transform: rotate(0);
+    opacity: 0;
+  }
+  25%{
+    transform: rotate(360deg);
+    opacity: 0.2;
+  }
+  75%{
+    transform: rotate(270deg);
+    opacity: 0.5;
+  }
+  100%{
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+
 }
 
 section .sky .cloud_1 {
@@ -45,71 +108,13 @@ section .city .city_img {
   - cloud_1: 큰 구름이 좌우로 이동하는 애니메이션
   - cloud_2: 작은 구름이 좌우로 이동하는 애니메이션
 */
-body{
-  animation: skyani 4s infinite;
+
+.cloud_1{
+  animation: cloud  3s infinite;
 }
-@keyframes skyani{
-  0%{
-    background-color: #636888;
-  }
-  25%{
-    background-color: #b1e1e2;
-  }
-  50%{
-    background-color: #fcd2e2;
-  }
-  75%{
-    background-color: #675577;
-  }
-  100%{
-    background-color: #636888;
-  }
-}
-.sun{
-  animation: sunani 1s infinite;
-}
-@keyframes sunani{
-  0%{
-    transform: rotate(45deg);
-  }
-  25%{
-    transform: rotate(90deg);
-  }
-  50%{
-    transform: rotate(180deg);
-  }
-  75%{
-    transform: rotate(270deg);
-    opacity: 0.5;
-  }
-  100%{
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-.moon{
-  position: absolute;
-  animation: moonani 1.5s infinite;
-}
-@keyframes moonani{
-  0%{
-    transform: rotate(360deg);
-    opacity: 0.2;
-  }
-  25%{
-    transform: rotate(270deg);
-    opacity: 0.5;
-  }
-  50%{
-    transform: rotate(180deg);
-  }
-  75%{
-    transform: rotate(90deg);
-    opacity: 0.5;
-  }
-  100%{
-    transform: rotate(45deg);
-    opacity: 0;
+@keyframes cloud{
+  from{
+    margin-left: 100%;
   }
 }
 /*
