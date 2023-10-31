@@ -4,57 +4,68 @@
 */
 body {
   width: 100%;
-  animation: skyani 8s infinite;
+  background-color: #b1e1e2;
+  animation: sky 10s linear infinite;
 }
-@keyframes skyani{
+@keyframes sky{
   0%{
-    background-color: #636888;
+    background-color: #636888;;
   }
   25%{
-    background-color: #b1e1e2;
+    background-color: #b1e1e2;;
   }
   50%{
-    background-color: #fcd2e2;
+    background-color: #fcd2e2;;
   }
   75%{
-    background-color: #675577;
+    background-color: #675577;;
   }
   100%{
-    background-color: #636888;
+    background-color: #636888;;
   }
 }
+
 section {
   width: 700px;
   height: 450px;
+  position: absolute;
+  /*가운데 정렬이 필요하기 때문에 앱솔루트에서는 top,left 각각 50%로 주면 정 중앙이 배치하는 것의 왼쪽 꼭지점으로 온다*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); /*위로 올리고 땡기려고 마이너스값을 준거임*/
 }
 
 section .sky {
   width: 100%;
   height: 100%;
+  position: relative; /*각각의 위치를 잡을 수 있도록*/
 }
 
 section .sky .sun {
   width: 180px;
-  animation: sunani 5s infinite ;
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: -160px;
+  left: 0px;
+  margin-left: -90px;
+  animation: sun 10s linear infinite ;
 }
-@keyframes sunani{
+@keyframes sun{
   0%{
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  25%{
     transform: rotate(0);
-    opacity: 0.8;
+    opacity: 1;
   }
   50%{
     transform: rotate(90deg);
-    opacity: 0.5;
+    opacity: 0;
   }
   75%{
-    transform: rotate(90deg);
-    opacity: 0.2;
+    opacity: 0;
   }
   100%{
-    transform: rotate(90deg);
     opacity: 0;
   }
 
@@ -63,39 +74,97 @@ section .sky .sun {
 section .sky .moon {
   width: 160px;
   position: absolute;
-  top: 30px;
-  left: 30px;
-  animation: moon linear 5s infinite ;
+  top: -160px;
+  left: 0px;
+  margin-left: -90px;
+  animation: moon 10s linear infinite ;
 }
 @keyframes moon{
   0%{
-    transform: rotate(0);
     opacity: 0;
   }
   25%{
-    transform: rotate(360deg);
-    opacity: 0.2;
+    opacity: 0;
+  }
+  50%{
+    transform: rotate(90deg);
+    opacity: 0;
   }
   75%{
-    transform: rotate(270deg);
-    opacity: 0.5;
+    transform: rotate(0deg);
+    opacity: 1;
   }
   100%{
-    transform: rotate(90deg);
-    opacity: 1;
+    transform: rotate(-90deg);
+    opacity: 0;
   }
 
 }
 
 section .sky .cloud_1 {
   width: 160px;
+  position: absolute;
+  left: 0%;
+  top: -30px;
+  animation: cloud_1  10s linear infinite;
+}
+@keyframes cloud_1{
+  0%{
+    left: 0%;
+    opacity: 0;
+  }
+  25%{
+    left: 50%;
+    opacity: 1;
+  }
+  50%{
+    left: 100%;
+    opacity: 0;
+  }
+  75%{
+    left: 50%;
+    opacity: 1;
+  }
+  100%{
+    left: 0%;
+    opacity: 0;
+  }
 }
 
 section .sky .cloud_2 {
   width: 90px;
+  position: absolute;
+  left: 12%;
+  top: 20px;
+  animation: cloud_2  5s linear infinite;
+}
+@keyframes cloud_2{
+  0%{
+    left: 15%;
+    opacity: 0;
+  }
+  25%{
+    left: 65%;
+    opacity: 1;
+  }
+  50%{
+    left: 115%;
+    opacity: 0;
+  }
+  75%{
+    left: 65%;
+    opacity: 1;
+  }
+  100%{
+    left: 15%;
+    opacity: 0;
+  }
+
 }
 
 section .city .city_img {
+  position: absolute;
+  bottom: 0px;
   width: 100%;
 }
 
@@ -109,14 +178,7 @@ section .city .city_img {
   - cloud_2: 작은 구름이 좌우로 이동하는 애니메이션
 */
 
-.cloud_1{
-  animation: cloud  3s infinite;
-}
-@keyframes cloud{
-  from{
-    margin-left: 100%;
-  }
-}
+
 /*
   참고: 알아야 할 속성 소개
   oapcity: 0 ~ 1 사이의 값으로 불투명도를 설정할 수 있음

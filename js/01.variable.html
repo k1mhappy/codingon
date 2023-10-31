@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+    <script>
+        /*
+        자료형
+        - 기본
+            -string
+            -number
+            -boolean
+            -null
+            -undefined
+        -객체
+            -array
+            -object
+
+        */ 
+
+        // 1.string
+        let myName = "길동";
+        let email = "gildong@naver.com"
+        let city = '"서울"';
+
+        console.log(myName);
+        console.log(email);
+        console.log(city);
+        
+        // 문자와 변수를 동시에 출력
+        console.log("내 이름은", myName, "입니다."); //,콤마를 하면 띄어쓰기가 된다.
+        console.log('내 이름은'+myName+'입니다.'); //+는 띄어쓰기가 안되서 나오니까 하고싶음 한칸 띄어쓰면 되지롱
+        console.log('내 이름은 '+myName+'입니다.');
+        // 백틱 (``)
+        console.log(`내 이름은 ${myName}입니다.`);
+        let gildong = `내 이름은 ${myName}입니다.`
+        console.log(gildong)
+
+        // 2. number
+        let number = 123;
+        let opacity = 0.7;
+        console.log(number);
+        console.log(opacity);
+        //NaN : not a number (숫자가아니다~ 라는 경우)
+        console.log('apple' - 3) //NaN
+        console.log('123' - 3) //console.log에서 변환을 해서 120으로 나온다.
+
+        // 3. boolean 참,거짓
+        let checked = true;
+        let isShow = false; //자바스크립트에서 세미콜론은 필수가 아니긴 하지만 습관들이기 위해 붙여서 작업하자!
+
+        console.log(checked);
+        console.log(isShow);
+
+        // 4. undefined 미할당 데이터
+        let undef;
+        console.log(undef);
+
+        // 5. null 의도된 빈 값
+        let empty = null;
+        console.log(empty);
+
+        //6. Array 배열
+        let fruits = ['orange','pineapple','grape','apple']; //[] -> 배열이다~ 라는 의미
+        let data = [1,'gildong',false,null,undefined];
+
+        console.log(fruits);
+        console.log(data);
+
+        console.log(fruits[0]); //배열 중 첫번째 값을 출력하겠다 
+
+        // 2차원 배열 : [ [] , [] , [] ] 배열 안에 배열이 있는 것
+
+        // 배열 함수
+        fruits.push('banana'); //fruits배열에 바나나 넣어주기!
+        console.log(fruits);
+        fruits.pop(); //맨뒤에꺼 빼기!
+        console.log(fruits); 
+
+        fruits.unshift('orange'); //push와 다르게 맨앞에 추가
+        console.log(fruits);
+        fruits.shift(); //맨앞에꺼 빼기~
+        console.log(fruits);
+
+        console.log(fruits.indexOf('orange')); //오렌지가 몇번째 인덱스인지
+        console.log(fruits.includes('peach'));//안에 넣은 값이 배열 안에 있냐
+
+        // 7. object 중괄호 열면된다
+        let cat = {
+            name: '나비',
+            age: 1,
+            isCute: true,
+            //함수도 객체 안에 넣을 수 있음
+            mew: function(){
+                console.log('냐옹');
+            }
+        }
+        console.log(cat);
+        console.log(cat.name);
+        console.log(cat.age);
+
+        // 8. typeof 자료형을 알려준다
+        console.log(typeof '안뇽');
+        console.log(typeof 123);
+        console.log(typeof true);
+        console.log(typeof cat);
+        console.log(typeof fruits);
+        console.log(typeof null);
+        console.log('typeof를 array나 null에 사용하면 '+ typeof{}+'결과를 얻을 수 있다.');
+
+        // 형변환
+        // let mathScore = prompt('수학 점수를 입력해주세요.');
+        // let engScore = prompt('영어 점수를 입력해주세요.');
+
+        // let avg = (mathScore + engScore) /2;
+        // console.log(avg);
+
+        // 1. 값 -> 문자 String()
+        let str1 = true;
+        let str2 = 123;
+        let str3 = null;
+
+        console.log(typeof String(str1));
+        console.log(typeof String(str2));
+        console.log(typeof String(str3));
+        // console.log(typeof str3.toString()); //null에는 투스트링을 할수가 없따./ .점을찍는다는거는 투스트링이라는애를 갖고있다는 의미/null이나 언디파인드는 빈값인데 불러올 속성이 없어서 그렇다라고만 알고 있짜.
+
+        // 2. 값 -> 숫자 Number()
+        let n1 = true;
+        let n2 = false;
+        let n3 = '123.9';
+
+        console.log(typeof  Number(n1));
+        console.log(typeof Number(n2));
+        console.log(typeof Number(n3));
+        console.log(typeof Number('hello')); //콘솔에는 number로 나오지만
+
+        console.log(Number(n1)); 
+        console.log(Number(n2));
+        console.log(Number(n3));
+        console.log(Number('hello')); // 실제값은 NaN가 나올 것 . 
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
