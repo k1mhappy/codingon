@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // //실습7.
+        // for(let i=1; i<=1000; i++){
+        //     if(i%13==0 && i%2!==0){
+        //         console.log('13의 배수면서 홀수인 숫자 :',i);
+        //     }
+        // }
+
+        // let k = prompt('숫자를 입력하세요');
+        // for(let k=1; k<=k; k++){
+        //     if(k%13==0 && k%2!==0){
+        //         console.log('13의 배수면서 홀수인 숫자 :',k);
+        //     }
+        // }
+            for(let i=0; i <= 1000; i = i + 13){
+                if(i % 2 == 1 ) console.log(i)
+            }
+            for(let i = 0; i <= 1000; i++){
+                if(i % 13 == 0 && i % 2 == 1){
+                    console.log(i);
+                }
+            }
+
+
+        // //실습8.  구구단
+        // for(let dan=2; dan<10; dan++){
+        //     for(let hang=1; hang<10; hang++){
+        //         console.log(dan,'x',hang,'=',dan*hang)
+        //     }
+        // }
+        for(let i = 2; i < 10 ; i++){
+            console.log(i + '단');
+            for(let j = 1; j < 10; j++){
+                console.log(i + 'x' + j + '=' + i*j);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

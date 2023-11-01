@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+    <script>
+        // function add(a,b){
+        //     alert(avg);
+        // }
+        // function sub(a,b){
+        //     alert(avg2);
+        // }
+        // function divide(a,b){
+        //     alert(avg3);
+        // }
+        // function mul(a,b){
+        //     alert(avg4);
+        // }
+        // let a = prompt('첫번째 숫자를 입력해주세요.');
+        // let b = prompt('두번째 숫자를 입력해주세요.');
+
+        // let avg = Number(a)+Number(b)
+        // let avg2 = Number(a)-Number(b)
+        // let avg3 = Number(a)*Number(b)
+        // let avg4 = Number(a)/Number(b)
+
+
+        //전역변수랑 지역변수
+        //전역변수 > 지역변수 범위가 큰 것
+        //but 지역변수가 좀 더 특별한 친구
+        let a = prompt('첫번째 숫자를 입력해주세요.');
+        a = Number(a);
+        let b = prompt('두번째 숫자를 입력해주세요.');
+        b = Number(b);
+
+        function add() {
+            let result = a + b;
+            alert(result);
+        }
+        function sub() {
+            let result = a - b;
+            alert(result);
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="add()">더하기</button>
+    <button onclick="sub()">빼기</button>
+    <button onclick="mul()">곱하기</button>
+    <button onclick="divide()">나누기</button>
+</body>
+</html>

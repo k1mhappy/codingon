@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if</title>
+    <script>
+        //실습4~5.
+        let age = prompt('몇살이세요?');
+        let gender = prompt('성별은 무엇입니까?');
+        age = Number(age);
+
+        if(age>=20){
+            if(gender=='man'){
+                console.log('성인 남자');
+            }else{
+                console.log('성인 여자');
+            }
+        }else if(age>=17){
+            if(gender=='man'){
+                console.log('고등 남자');
+            }else{
+                console.log('고등 여자');
+            }
+        }else if(age>=14){
+            if(gender=='man'){
+                console.log('중등 남자');
+            }else{
+                console.log('중등 여자');
+            }
+        }else if(age>=8){
+            if(gender=='man'){
+                console.log('초등 남자');
+            }else{
+                console.log('초등 여자');
+            }
+        }else{
+            if(gender=='man'){
+                console.log('유아 남자');
+            }else{
+                console.log('유아 여자');
+            }
+        }
+
+        //실습6.
+        let now = new Date().getHours();
+        now = Number(now);
+        console.log(now) //now라는 값이 궁금해서 써봄 //현재시간이 나온다.
+        now >= 12 ? console.log('오후입니다') : console.log('오전입니다.');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
