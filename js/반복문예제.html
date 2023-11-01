@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // //실습7.
+        //실습7.
         // for(let i=1; i<=1000; i++){
         //     if(i%13==0 && i%2!==0){
         //         console.log('13의 배수면서 홀수인 숫자 :',i);
@@ -28,7 +28,7 @@
             }
 
 
-        // //실습8.  구구단
+        //실습8.  구구단
         // for(let dan=2; dan<10; dan++){
         //     for(let hang=1; hang<10; hang++){
         //         console.log(dan,'x',hang,'=',dan*hang)
@@ -40,6 +40,41 @@
                 console.log(i + 'x' + j + '=' + i*j);
             }
         }
+
+
+        //실습 9.
+        // let n = prompt('숫자를 입력하세요');
+        // let sum = 0;
+
+        // for(let i = 1; i < 100; i++){
+        //     if(i % 2 == 0 || i % 3 == 0){
+        //         sum += i;
+        //     }
+        // }
+
+        // console.log(sum);
+        let n = prompt('정수 n 입력하라. 단 0 < n < 100 임');
+        n = Number(n);
+        let sum = 0; //0으로 초기화를 해준다
+
+        for(let i = 0; i < n; i++){
+            if(n <=0 || n >= 100) {
+                alert('입력값이 잘못됐습니다.');
+                break;
+            }
+            else{
+                if(i % 2 == 0 || i % 3 == 0) sum += i;
+            }
+        }
+        console.log('sum: ', sum);
+
+        let sum2 = 0;
+        let i = 0;
+        while(i < n){
+            if(i % 2 == 0 || i % 3 == 0) sum2 += i;
+            i++;
+        }
+
 
 
     </script>
