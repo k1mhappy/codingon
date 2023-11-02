@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array_for문</title>
+    <script>
+        let fruits = ['apple','banana','orange','melon','grape'];
+
+        console.log('for basic');
+        for(let i=0; i< fruits.length; i++){
+            console.log(fruits[i]);
+        }
+
+        console.log('for of');
+        for(let fruit of fruits){ //of 뒤에는 사용할 변수이름 앞에는 아무거나 만들어주삼
+            console.log(fruit);
+        }
+
+        console.log('forEach');
+        fruits.forEach((fruit,index,arr) => {
+            console.log('fruit: ', fruit);
+            console.log('index: ', index);
+            console.log('arr: ', arr);
+        }) //노란색 괄호 안에는 화살표함수던 함수표현식이던 적으면됨
+
+        //꼭 fruit,index,arr 세가지 다써야되여 ? ㄴㄴ 생략해도됨. 근데 arr까지 쓰려면 index까지 써야해서 세가지 다써야하고 index까지 쓰려면 arr 생략가능
+        fruits.forEach((fruit) => {
+            console.log('fruit: ', fruit);
+        })
+
+        // filter
+        console.log('filter');
+        let filterResult = fruits.filter((fruit) => {
+            return fruit.includes('p');
+        })
+        let filterResult2 = fruits.filter(fruit =>fruit.includes('p'));
+        
+        console.log('filterResult: ', filterResult);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
