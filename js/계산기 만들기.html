@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    값1:<input type="text" id="value1" value=""><br>
+    값2:<input type="text" id="value2" value=""><br>
+    연산자:<input type="text" id="oper" value=""><br>
+    결과:<input type="text" id="result"><br>
+
+    <button onclick="getValue()">계산하기</button>
+    <button onclick="reset()">초기화</button>
+
+
+    <script>
+
+        function getValue() {
+            let v1 = document.querySelector('input');
+            console.log(v1.value);
+            let v2 = document.getElementById('value2');
+            console.log(v2.value);
+            let oper = document.getElementById('oper');
+            console.log(oper.value);
+
+            switch(oper.value){
+                case '+':
+                    console.log(Number(v1.value)+Number(v2.value));
+                    break;
+                case '-':
+                    console.log(Number(v1.value)-Number(v2.value));
+                    break;
+                case '*':
+                    console.log(Number(v1.value)*Number(v2.value));
+                    break;
+                case '/':
+                    console.log(Number(v1.value)/Number(v2.value));
+                    break;
+            }
+            // console.log(typeof plus.value); // '+'
+
+        }
+
+        function reset() {
+            
+        }
+    </script>
+</body>
+</html>
