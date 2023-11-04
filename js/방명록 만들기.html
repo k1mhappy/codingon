@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>방명록입니다.</p>
+    작성자
+    <input type="text" id="name"><br>
+    내용
+    <input type="text" id="bode"><br>
+    <br>
+    <button type="button" onclick="write1()">작성</button>
+    <table id="table" border="1">
+        <tr>
+            <th>번호</th>
+            <th>작성자</th>
+            <th style="width: fit-content;">내용</th>
+            <th style="width: 200px;">작성일</th>
+        </tr>
+    </table>
+
+    <script>       
+        //전역변수 cnt 라는 변수 만들기
+        //전역변수 : 어디서든 script 태그 안에서 사용 가능
+        let cnt = 1;
+        // write안에 쓰면 작성버튼을 눌렀을때마다 증가가 아닌 1에서 끝나버리니까 바깥에 써서 즉, 전역변수로 쓰는 것.
+
+        function write1(){
+            let name = document.getElementById('name');
+            let bode = document.getElementById('bode');
+
+            let nameVal = name.value;
+            let bodeVal = bode.value;
+
+            let tr1 = document.createElement('tr');
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            let td4 = document.createElement('td');
+            let now = new Date();
+            let year = now.getFullYear();
+            let month = (now.getMonth()+1);
+            let day = now.getDate();
+            let hour = now.getHours();
+            let minutes = now.getMinutes();
+            let dateString = year + '-' + month + '-' + day +' ' +hour + ':' + minutes;
+
+            td1.innerHTML = cnt;
+            cnt++; 
+            td2.innerHTML = nameVal;
+            td3.innerHTML = bodeVal;
+            td4.innerHTML = dateString;
+            
+
+            let table = document.getElementById('table');
+            table.append(tr1);
+            table.appendChild(td1);
+            table.appendChild(td2);
+            table.appendChild(td3);
+            table.appendChild(td4);
+
+            // 입력값 초기화
+            name.value = '';
+            bode.value = '';
+
+            //초기화 다른 예시
+            let inputs = document.querySelectorAll('input'); //NodeList
+            console.log(inputs);
+
+            for(let i = 0; i < inputs.length; i++){
+                console.log('for문: ', inputs[i]);
+                // inputs[i] : 위에 name, content 라는 변수로 만들어둔 요소와 동일
+                inputs[i].value = '';
+            }
+            
+
+        }
+
+    </script>
+</body>
+</html>
