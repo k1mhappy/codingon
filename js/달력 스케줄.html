@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <script
-        type="text/javascript"
-        src="https://code.jquery.com/jquery-3.5.0.min.js"
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
     ></script>
 
     <title>내 스케줄</title>
@@ -27,21 +26,6 @@
         cursor: pointer;
       }
     </style>
-    <script>
-        // 1. 클릭한 날짜 알 수 있는 이벤트 리스너 ->클릭한 요소 기억해두기
-        // 2. 작성 버튼 클릭 시 클릭한 날짜에 내용 추가
-        
-        $('td>p').on('click',function(){
-            $('#date').text('p');
-           // let day = p.value;
-            //console.log(day);
-
-        });
-
-        function writeSchedule(){
-            $('#content').switchClass('content','td');
-        }
-    </script>
   </head>
 
   <body>
@@ -124,7 +108,20 @@
     </table>
 
     <script>
+      let result;
 
+      $('td > p').on('click',function(e){ //날짜 클릭시 콘솔에 값나옴
+        console.log(e.target);
+        $('#date').val(e.target.innerHTML); //날짜에 선택한날짜를 텍스트로 넣음.
+        result = e.target;
+      });
+
+      function writeSchedule(){
+        let content = $('#content').val(); //작성한 내용value를 content에 넣음
+        //console.log(content); ok
+        $(result).append(`<p>${content}</p>`); //선택한 날짜에 내용을 삽입. 선택한 날짜클래스 필요
+        
+      }
     </script>
   </body>
 </html>
