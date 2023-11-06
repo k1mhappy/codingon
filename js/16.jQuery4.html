@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>jQuery event</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text">
+        <button>버튼</button>
+    </div>
+    <script>
+        console.log($(document));
+        // ready : 돔 트리 생성 완료된 후 실행
+        $(document).ready(function(){
+            $('.container').append('<h2>안녕 ready</h2>');
+        })
+
+        $(function(){
+            // ready 와 동일
+            $('.container').append('<h2>안녕 ready2</h2>');
+        })
+
+        // load : 돔 트리 생성 전 실행 . 그래서 ready멘트보다 더 먼저 나옴
+        $(window).on('load',function(){
+            $('.container').append('<h2>안녕 load</h2>');
+        })
+
+        // click
+        $('button').click(function(){
+            alert('클릭!');
+        })
+        $('button').on('cllick', function(){
+            alert('클릭! on');
+        }) //on은 이벤트전체를 여기에 넣는다라는 뜻 ?
+
+        // mouseover
+        $('button').mouseover(function(){
+            alert('mouse over');
+        })
+
+        // key
+        $('input').keydown(function(e){
+            console.log('e.target: ',e.target);
+            // console.log('keydown');
+            console.log(e.key);
+            //만약 엔터를 눌렀는지 궁금할때
+            // if(e.key == 'Enter') alert('enter 입력'); 이런식으로 응용 가능
+            console.log('this:', this);
+        })
+    </script>
+</body>
+</html>

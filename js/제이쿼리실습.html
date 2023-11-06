@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>jQuery 실습1</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+        }
+        button{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        function apple(){
+            $('#img').attr('src','https://i.namu.wiki/i/jeTWl0DU-7mSCld3AV69ZRFMpfUSEIpfuwaz2el0xCCJ0k2EeuaHuNcrKFpElxO9Cf78E37jRLEpAPi9AN11aA.webp');
+        }
+
+        function banana(){
+            $('#img').attr('src','https://cdn.healthinnews.co.kr/news/photo/202307/39252_40878_352.jpg');
+        }
+
+        function grape(){
+            $('#img').attr('src','https://mblogthumb-phinf.pstatic.net/MjAxNzA3MDZfMTY2/MDAxNDk5MzI1NzM0NDk1.HI3TAVJR40TMyEUIGaixX15XaXTDZN28LWoTmWfepcgg.4owffy6QQidVly21cAE1tNUxUGQjYThof8UpdiOATGIg.JPEG.dure_coop/image_8681369461499325721561.jpg?type=w800');
+        }
+
+        function peach(){
+            $('#img').attr('src','https://img.hankyung.com/photo/202207/BD.30664440.1.jpg');
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <img src="" alt="과일" id="img">
+        
+        <button onclick="apple()">사과</button>
+        <button onclick="banana()">바나나</button>
+        <button onclick="grape()">포도</button>
+        <button onclick="peach()">복숭아</button>
+    </div>
+</body>
+</html>
