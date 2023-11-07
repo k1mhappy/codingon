@@ -151,6 +151,36 @@
         $('#content').val("");
         //날짜 초기화 $('#date').val('');
       }
+
+      //리더님 방식(this 사용)
+      //이벤트 객체 e를 통해 해당하는 객체가 뭔지 가져올 수 있는 이벤트 리스너 사용~~
+      let target;
+
+      $('td > p').on('click',function(){
+        console.log(this);
+        // 날짜만 가져오려면 this의 text값을 가져와야 한다.
+        console.log($(this).text());
+
+        // 날짜,내용 input 선택
+        $('#date').val($(this).text());
+        // let date = $(this).text(); 변수 선언해서 해도됨
+
+        //this 는 중괄호 밖을 나가면 없어진다. 스코프안에서만 활용가능하므로 this를 기억하기 위한 전역변수를 만들어줘야함 . (128번열)
+        target = this;
+      });
+      
+      function writeSchedule(){
+        let content = $('#content').val();
+
+        // 요소 추가. target에는 요소가 들어가있기때문에(<p>) 따로 선택자를 만들지 않아도 된다. 
+        //target은 p를 가리키고 부모인 td 태그에 내용을 넣어줄거라서 parent 써줌. 의미가 없는 span태그를 써줌
+        $(target).parent().append('<span>'+content+'</span><br>');
+        //$(target.parentNode).append(~~~) 와 동일
+
+        // 내용 초기화
+        $('#content').val("");
+        //날짜 초기화 $('#date').val('');
+      }
     </script>
   </body>
 </html>
