@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+        src="https://kit.fontawesome.com/837ff3adc1.js"
+        crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+        body{ /*노멀라이즈*/
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* header 스타일링*/
+        header{
+            width: 100%;
+            height: 100px;
+            z-index: 100;
+        }
+        .inner{
+            background-color: lightblue;
+            display: flex; /*상하좌우 정렬을 위해 flex 작성함*/
+            justify-content: center; /*콘텐트내용 중앙으로 모이기*/
+            align-items: center;
+            height: 100%;
+        }
+        .logo{
+            position: relative; /*righr200px 주려고 릴레티브 작성*/
+            right: 200px; /* 로고랑 메뉴랑 떨어지게 오른쪽에 200px 넣어줌*/
+            color: white;
+            font-size: 2rem;
+        }
+        .menu{
+            display: flex; /*flex속성으로 가로정렬해줌*/
+        }
+
+        .menu li{
+            margin: 0 10px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            header{
+                height: 60px;
+            }
+            .inner{
+                /*display: flex;*/
+                /*플렉스를 주면 로고가 자기 자신만 잡아놓고 있음 그래서 중앙정렬이 안먹히는 것. border로 확인해보기*/
+                display: block;
+                /*블록을 주면 로고의 넓이가 inner 전체로 되기 때문에 로고의 중앙정렬이 이제야 먹을 거임!*/
+                /* border: 1px solid rgb(176, 19, 19); */
+            }
+            .logo{
+                /* display: flex; */
+                /*position: absolute; */
+                /* justify-content: center; justify랑 align얘네는 여러 item들이 있을때 들어먹음 . flex기능!
+                align-items: center; */
+                position: static;
+                text-align: center; 
+                height: 60px;
+                line-height: 60px;
+                /* border: 1px solid black; */
+                
+            }
+            .menu{
+                position: static;
+                display: block;
+                text-align: center;
+                background-color: azure;
+            }
+            .menu li{
+                margin-bottom: 20px;
+                font-weight: 500;
+            }
+        }
+
+
+        /* 리더님 방식 */
+        @media screen and (max-width: 768px){
+            /*css우선순위선택 때문에 선택자를 더 자세히 작성하거나 위에서 작성한 그대로 사용해야 적용된다*/
+            header{
+                height: 60px;
+            }
+            .inner{
+                display: block;
+            }
+            .logo{
+                /*1번째 방법 : flex 사용 */
+                display: flex; /*쓰는 이유: justify랑 align을 사용해서 상하좌우정렬 하기 위해*/
+                justify-content: center;
+                align-items: center; /*여기까지 했을때 지맘대로 움직임 . 너비가 100%가 안되어있기 때문*/
+                width: 100%;
+                right: 0; /*아까 주었던 200px 초기화*/
+                height: 60px;
+
+                /*2번째 방법 : 포지션 static 사용*/
+                position: static;
+                text-align: center; /*로고는  텍스트로 볼수있으니 텍스트얼라인으로 정렬*/
+                line-height: 60px; /*text일때 사용가능한 아이*/
+            }
+            .menu{
+                display: block;
+                background-color: azure;
+                text-align: center;
+            }
+            .menu li{
+                padding: 10px 0;
+                /* margin을 주면 클릭커서가 올라갈수있는 범위가 좁아진다. 그래서 보통 클릭요소를 사용할땐 padding을 써준다 */
+                font-weight: 500;
+            }
+        }
+
+
+        /* 각자 다른 기기 사이즈로 설정하기
+        @media screen and (480px <= width <= 1024px){
+            header{
+                height: 60px;
+            }
+            .inner{
+                display: block;
+            }
+            .logo{
+                position: static;
+                text-align: center; 
+                line-height: 60px; 
+            }
+            .menu{
+                display: block;
+                background-color: azure;
+                text-align: center;
+            }
+            .menu li{
+                padding: 10px 0;
+                font-weight: 500;
+            }
+        }
+        @media screen and (max-width: 480px){
+            header{
+                height: 45px;
+            }
+            .inner{
+                display: block;
+                background-color: lightcoral;
+            }
+            .logo{
+                position: static;
+                text-align: center; 
+                line-height: 45px; 
+            }
+            .menu{
+                display: block;
+                background-color: lightpink;
+                text-align: center;
+            }
+            .menu li{
+                padding: 10px 0;
+                font-weight: 500;
+                font-size: 0.8rem;
+            }
+             
+        } */
+        
+    </style>
+</head>
+<body>
+    <header> 
+        <div class="inner">
+            <div class="logo">
+                <i class="fa-solid fa-igloo"></i> 
+            </div>
+
+            <ul class="menu">
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+            </ul>
+
+        </div>
+    </header>
+</body>
+</html>
