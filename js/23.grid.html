@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /*1fr : 화면을 6개로 나눈거 중 */
+            grid-template-rows: repeat(4, 100px);
+            box-sizing: border-box; /*박스의 크기를 어떤것을 기준으로 계산할지를 정하는 속성성*/
+        }
+        .item1{
+            background-color: #F94144;
+            grid-column: span 6; /*세로를 몇칸 차지할지. span은 전부 확장하겠다는 뜻*/
+        }
+        .item2{
+            background-color: #F3722C;
+            grid-row: span 2; /*가로를 2칸 차지하겠다는 뜻*/
+        }
+        .item3{
+            background-color: #f9c74f;
+            grid-column: span 4; /*가로를 몇칸 차지할지. span은 전부 확장하겠다는 뜻*/
+        }
+        .item4{
+            background-color: #43aa8b;
+            grid-row: span 2; /*가로를 몇칸 차지할지. span은 전부 확장하겠다는 뜻*/
+        }
+        .item5{
+            background-color: #f8961e;
+            grid-column: span 2; /*가로를 몇칸 차지할지. span은 전부 확장하겠다는 뜻*/
+        }
+        .item6{
+            background-color: #90be6d;
+            grid-column: span 2; /*가로를 몇칸 차지할지. span은 전부 확장하겠다는 뜻*/
+        }
+        .item7{
+            background-color: #4444ff;
+            grid-column: span 6; /*가로를 몇칸 차지할지. span은 전부 확장하겠다는 뜻*/
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">item</div>
+        <div class="grid-item item2">item</div>
+        <div class="grid-item item3">item</div>
+        <div class="grid-item item4">item</div>
+        <div class="grid-item item5">item</div>
+        <div class="grid-item item6">item</div>
+        <div class="grid-item item7">item</div>
+    </div>
+</body>
+</html>
