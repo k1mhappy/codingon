@@ -1,3 +1,3 @@
-# CONDINGON
+# CodingOn
 
 📚 codingon x posco 
