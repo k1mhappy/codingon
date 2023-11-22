@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./component/head',{title: 'HOME'})%>
+    <!--앞에 파일을 불러온후 키값밸류값 생각해서 그 파일에서 title이 키값을 가진 애한테 밸류값이 home으로 들어가니 html상 home으로 나오겟죠? -->
+</head>
+
+<body>
+    <%- include('./component/header')%>
+    <h1>Hello EJS</h1>
+        <!--index.js 는 클라이언트에게 보여지는 파일 -->
+    <% for (let i =0; i <5; i++) { %>
+        <div>hi~ <%= i %>번째</div>
+        <%= i %>
+            <% } %>
+    <br>
+    <!-- btns 버튼-->
+    <% console.log(btns)%> <!--터미널에 찍힘-->
+    <% for(let btn of btns) {%> <!--for문의 i=0; ~~ 랑 같은 의미인데 배열로 받는거임 // 앞에 let은 함수정의한거! 배열의 첫번째값을 btn에 넣고 두번째값도 btn에 넣고 배열로 만드는거-->
+    <button type="button" class="btn btn-info"><%=btn%></button>
+    <% } %>
+    <!--isLogin-->
+    <% if(!isLogin) {%>
+    <h4>아직 로그인을 안했군요!</h4>
+    <% }else {%>
+    <h4>로그인 완료!</h4>
+    <div><%=me.name%></div>
+    <div><%=me.msg%></div>
+    <%}%>
+</body>
+
+</html>

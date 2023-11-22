@@ -1,0 +1,7 @@
+header {
+    background-color: lightblue;
+    color: white;
+}
+header a:link,a:visited {
+    color: white;
+}

@@ -1,0 +1,22 @@
+<!--index.ejs에만 있던 css파일을 여기다 넣어주고 
+파일들 헤드에  %include%
+라고 붙여주면 일일히 쓸필요없이 이파일을 불러온다-->
+
+<!-- bootstrap cdn -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"
+></script>
+
+<!-- common css (공통css) -->
+<link rel="stylesheet" href="/static/css/index.css">
+
+<!--title-->
+<title><%= title%></title>
