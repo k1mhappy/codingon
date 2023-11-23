@@ -88,10 +88,10 @@ class Rectangle extends Shape {
         
     }
     getDiagonal(){
-        return Math.sqrt(this.width*2 * this.height*2);
+        return Math.sqrt(this.width*this.width + this.height*this.height);
     }
 }
-let rec2 = new Rectangle(6,6);
+let rec2 = new Rectangle(3,4);
 console.log(rec2.getDiagonal());
 
 class Triangle extends Shape {

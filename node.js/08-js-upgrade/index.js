@@ -51,7 +51,7 @@ const info = {
 }
 function getInfo(lecture){ 
     //구조분해할당 사용하여 값 추출
-    console.log(lecture); // 구조분해하기 어려우면 콘솔로 찍고 작성하면 편함
+    // console.log(lecture); 구조분해하기 어려우면 콘솔로 찍고 작성하면 편함
     const {name, time, content} = lecture;     //lecture 는 47번줄~50번줄 const info를 받은거임
     // 출력 문장 생성 //아무 단어써서 함수정의해준 다음 문장쓰기 젤쉬은 ``백틱 씀
     const output = `${name}강의는 ${time}시에 하고 ${content} `;
