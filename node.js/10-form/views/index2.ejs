@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get 정보 받기</title>
+</head>
+<body>
+    <h1>Get 폼 실습</h1>
+
+    <form action="/login" method="get"
+    name="valiForm" onsubmit="return checkForm(this)">
+        <label for="name">이름</label> <!--for랑 id 속성 같게 맞추기-->
+        <input type="text" name="name" id="name">
+
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" id="male" value="남자">
+            <label for="male">남자</label>
+            <input type="radio" name="gender" id="female"  value="여자">
+            <label for="female">여자</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="birthYear" id="year">
+                <%for (let i=0; i<50; i++){%>
+                    <option value="<%= 2010 - i%>"><%=2010- i %></option>
+                <%}%>
+            </select>
+            <label for="year">년</label>
+            <select name="birthMonth" id="month">
+                <%for (let i=1; i<13; i++){%>
+                    <option value="<%= i %>"><%= i %></option>
+                <%}%>
+            </select>
+            <label for="month">월</label>
+            <select name="birthDay" id="day">
+                <%for (let i=1; i<32; i++){%>
+                    <option value="<%= i %>"><%= i %></option>
+                <%}%>
+            </select>
+            <label for="day">일</label>
+        </fieldset>
+        <fieldset>
+            <legend>관심사</legend>
+            <input type="checkbox" name="hobby" id="travel" value="여행">
+            <label for=""></label>여행
+            <input type="checkbox" name="like" value="패션">패션
+            <input type="checkbox" name="like" value="음식">음식
+        </fieldset>
+        <br>
+        <button>회원가입</button>
+    </form>
+
+    <h1>Post 요청</h1>
+    <form action="/login" method="post"
+    name="valiForm" onsubmit="return checkForm2(this)">
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name">
+
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="남자">남자
+            <input type="radio" name="gender" value="여자">여자
+        </fieldset>
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="birth" id="year">
+                <%for (let i=0; i<50; i++){%>
+                    <option value="<%= 2010 - i%>"><%=2010- i %></option>
+                <%}%>
+            </select>년
+            <select name="birth" id="month">
+                <%for (let i=1; i<13; i++){%>
+                    <option value="<%= i %>"><%= i %></option>
+                <%}%>
+            </select>월
+            <select name="birth" id="day">
+                <%for (let i=1; i<32; i++){%>
+                    <option value="<%= i %>"><%= i %></option>
+                <%}%>
+            </select>일
+        </fieldset>
+        <fieldset>
+            <legend>관심사</legend>
+            <input type="checkbox" name="like" value="여행">여행
+            <input type="checkbox" name="like" value="패션">패션
+            <input type="checkbox" name="like" value="음식">음식
+        </fieldset>
+        <fieldset>
+            <legend>선택</legend>
+            <label for="color">좋아하는 색상
+                <input type="color" name="color">
+            </label><br>
+            <label for="range">현재 기쁨상태
+                <input type="range" name="range">
+            </label>
+        </fieldset>
+        <br>
+        <button>회원가입</button>
+    </form>
+
+    <script>
+        function checkForm(form){
+            if(form.name.value == ''){
+                form.name.focus();
+                alert('이름을 입력해주세요.');
+
+                return false;
+            }
+            else if(form.gender.value == ''){
+                alert('성별을 선택해주세요.');
+
+                return false;
+            }
+            if((form.like[0].checked == false) && (form.like[1].checked == false) &&(form.like[2].checked == false)){
+                alert('관심사를 선택해주세요.');
+
+                return false;
+            }
+
+        }
+        function checkForm2(form){
+            if(form.name.value == ''){
+                form.name.focus();
+                alert('이름을 입력해주세요.');
+
+                return false;
+            }
+            if(form.gender.value == ''){
+                alert('성별을 선택해주세요.');
+
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
