@@ -50,6 +50,10 @@ app.post('/fetch', (req,res)=>{
 // 실습
 const userId = '홍길동';
 const userPw = '1234';
+app.get('/login', (req,res)=>{
+    console.log(req.query);
+    res.send(req.query);
+})
 
 app.listen(PORT, () => {
     console.log(`server is opening ${PORT}`);
