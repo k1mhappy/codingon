@@ -4,7 +4,8 @@ const PORT = 8000;
 
 //등록하기 : 뷰엔진은 뭘로쓸꺼냐, ejs쓸거다
 app.set('view engine', 'ejs');
-app.set('/views','views'); //views실제 폴더만들어줘야함
+app.set('views','./views'); //views실제 폴더만들어줘야함
+// view 템플릿파일을 찾을 때 사용할 디렉토리 지정
 
 // 미들웨어 등록
 // req.body 객체를 해석할 수 있도록 body-parser 등록
