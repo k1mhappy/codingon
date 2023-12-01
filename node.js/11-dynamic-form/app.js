@@ -55,6 +55,10 @@ app.post('/fetch', (req, res) => {
 const userId = '홍길동';
 const userPw = '1234';
 
+const practice2Router = require('./routes/login');
+app.use('/', practice2Router);
+
+/*
 app.get('/practice1', (req, res) => {
     res.render('practice1')
 })
@@ -79,7 +83,7 @@ app.post('/axios2', (req, res) => {
     }
     // 결과 값을 반환
 })
-
+*/
 
 
 app.listen(PORT, () => {
